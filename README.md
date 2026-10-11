@@ -1,6 +1,15 @@
-# S Device — Future Phone Project
+# S Device One — Future Phone Project
 
-Budget-friendly rebuild of an existing damaged Samsung smartphone into a functional, futuristic Android device.
+Budget-friendly rebuild plan for one handset built around a selected donor mainboard. This is a plan, not a completed or qualified device.
+
+## Current hardware decision — 2026-10-11
+
+- **Mainboard:** Infinix handset; exact model is still unverified. “Note 2” is an unconfirmed guess.
+- **Samsung handset:** secondary donor for compatible non-core parts only, after fit and electrical checks.
+- **Realme 13 5G:** intact software test/reference phone.
+- Keep the Infinix mainboard with its own compatible display, battery, charging circuit, cameras, radios, buttons, and antennas.
+
+See [Build 005 — S Device One](docs/BUILD-005-S-DEVICE-ONE.md) for the component and purchase gates.
 
 ## Project phases
 1. Hardware inspection, battery safety, exact model confirmation and backup.
@@ -17,10 +26,10 @@ Budget-friendly rebuild of an existing damaged Samsung smartphone into a functio
 - No custom ROM or bootloader unlock before backup and model-specific compatibility are verified.
 - Do not upload IMEI, serial numbers, personal photos, or credentials to public evidence.
 
-## Build 001 resources
+## Build resources
 - [Inspection and repair plan](docs/BUILD-001.md)
 - [Shopping guide](docs/SHOPPING.md)
 - [Inspection checklist](evidence/inspection-template.csv)
 
 ## Next gate
-Confirm exact model number, power-on status, battery condition and professional repair quotation. Record measured results before ordering parts.
+Confirm the Infinix model number, donor condition, battery safety and professional repair quotation. Record inspection results before ordering parts.
