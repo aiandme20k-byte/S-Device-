@@ -2,8 +2,13 @@
 
 Decision (user, 2026-10-11): S-01 cracked Samsung and S-03 cracked Infinix are DONORS for ONE completed S Device handset. Realme 13 5G stays intact as software test/reference phone.
 
+## Confirmed hardware decision (2026-10-11)
+- MAIN BOARD: Infinix handset (model unverified; user suggested Note 2).
+- Samsung: secondary donor for mechanically and electrically compatible non-core accessories; no direct mixing of phone batteries, display ribbons, charging systems or antennas without exact compatibility verification.
+- Realme 13 5G: intact software testing phone.
+
 ## Architectural choice
-- Pick a single working, known-model phone mainboard with its OWN exact compatible display, battery, charging circuit, cameras, radios, buttons and antennas.
+- Use the Infinix mainboard with its OWN exact compatible display, battery, charging circuit, cameras, radios, buttons and antennas.
 - Other donor can provide universal external accessories or cosmetically reusable materials after mechanical/electrical fit checks.
 - NEVER splice Li-ion cells, connect dissimilar battery packs in parallel, interchange unknown screen FPCs, combine high-speed motherboard traces or graft unrelated charging circuitry.
 - If both phones run, a second full phone may act as a separate Wi-Fi node, but that is not one motherboard or combined RAM/CPU and greatly increases thickness/complexity. Not chosen for budget v1.
