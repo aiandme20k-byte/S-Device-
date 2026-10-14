@@ -1,0 +1,11 @@
+item,source,minimum_spec,decision,estimated_thb,verification
+Realme 13 5G,owned,working stock Android,KEEP,0,Check app install and power
+PC local server,owned,Python 3.10+ and secure local SSD,KEEP,0,Run tests and measure disk
+4TB HDD master,owned,healthy SMART and verified secondary backup,KEEP,0,Backup restore drill
+Old Android boards,owned,model matched safe intact modules,DEFER,0,Inventory and test independently
+Projector,online,real HDMI input; verified native resolution/brightness,CONDITIONAL,800-2500,Check video input and review
+Prism acrylic display,online,USB 5V isolated/ESP32 screen,OPTIONAL,300-1000,Check source and supply
+Phone/cable/stand,owned or online,mechanical fit and safe USB power,CONDITIONAL,200-900,Fit test
+Certified power bank,owned or online,commercial protected USB output,OPTIONAL,500-1500,Load/time test
+Old salvaged Li-ion battery,donor,unknown health and protections,REJECT,0,Do not rewire
+QVE ZPE power,experimental,unverified net output,RESEARCH HOLD,0,No device dependency
