@@ -1,0 +1,11 @@
+item,assigned_role,observation,verification,status
+Realme 13 5G,Primary S Device phone,Working screen in submitted photos,Check USB debugging Android build and battery,PARTIAL
+Samsung blue broken,Salvage candidate,Cracked rear glass,Model and battery safety,UNKNOWN
+Infinix broken,Salvage candidate,User reports working internals,Exact model and battery safety,UNKNOWN
+PC or laptop,Local compute host,Previously discussed,Confirm OS RAM Python and secure local network,UNKNOWN
+4 TB external HDD,Alex HSXI master storage,Previously designated,Connect safely SMART backup check,UNKNOWN
+USB cooling fan,Optional external cooling,Photographed,Check 5V rating and guards,UNKNOWN
+Old power adapters,Do not dismantle mains supplies,Photographed,Read output voltage/polarity and condition,UNKNOWN
+Portable SSD red,Transport or backup,Photographed,Check connection capacity filesystem,UNKNOWN
+Projector,Optional second display,Screenshot examples only,Not owned/verified,NOT_PURCHASED
+ESP32 prism display,Optional secondary status display,Screenshot examples only,Not owned/verified,NOT_PURCHASED
