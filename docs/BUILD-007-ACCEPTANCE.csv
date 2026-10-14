@@ -1,0 +1,9 @@
+gate,test,expected,evidence,status
+G0,Device inventory,Models and safety screened,Photo and registry,NOT RUN
+G1,Realme core,Stock phone works,Functional checklist,NOT RUN
+G2,Private API,Authorized only and no default LAN exposure,Unit test output,NOT RUN
+G3,Android app,Build and install stable,Build log and screenshot,NOT RUN
+G4,Projected display,Real input/scaling/focus,Photo plus native resolution record,NOT RUN
+G5,Privacy controls,Opt in camera microphone and command authorization,Permission audit,NOT RUN
+G6,Endurance,Stable measured temps and energy,CSV telemetry,NOT RUN
+G7,Release integrity,All tests and backup pass,SHA256 manifest,NOT RUN
