@@ -25,10 +25,14 @@ class MainActivity : Activity() {
                 setPadding(4, 18, 4, 18)
             })
         }
-        label("S DEVICE", 36f, Color.rgb(48, 211, 247))
+        label("QVE HNS • FUTURE TECHNOLOGY", 15f, Color.rgb(216, 182, 108))
+        label("S DEVICE", 36f, Color.rgb(93, 220, 255))
+        label("QUANTUM • VISION • EXPLORATION", 13f, Color.rgb(216, 182, 108))
         label("OS Experience 0.1 • Android Foundation", 16f, Color.WHITE)
         label("AI  |  VISION  |  SERVICES  |  DEVICES", 17f, Color.rgb(149, 210, 237))
         label("Private services: not connected yet", 13f, Color.LTGRAY)
+        label("Authorized By SETT", 12f, Color.rgb(216, 182, 108))
+        label("EXPLORE • ENGINEER • CREATE • A BETTER TOMORROW", 11f, Color.GRAY)
         label("Prototype dashboard — build and verify before device deployment", 12f, Color.GRAY)
         setContentView(root)
     }
