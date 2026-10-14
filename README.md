@@ -1,10 +1,10 @@
 # S Device One — Recycled Future Smartphone + Dual-Display AI Platform
 
-**Current baseline: BUILD 007 (2026-10-15).** The working realme 13 5G is the primary smartphone, with stock Android kept for drivers, radios and phone functionality. Custom S Device UX and private AI services are in development. The Samsung and Infinix are optional research donors. SETT X-1 is an inspiration example, **not** this product's name.
+**Current continuity checkpoint: BUILD 010 (2026-10-15); engineering design baseline: BUILD 007.** The working realme 13 5G is the primary smartphone, with stock Android kept for drivers, radios and phone functionality. Custom S Device UX and private AI services are in development. The Samsung and Infinix are optional research donors. SETT X-1 is an inspiration example, **not** this product's name.
 
 Goal: built-in smartphone screen + independent projector screen, local-first AI control, optional optically reflected ESP32 prism, recycled materials, strong privacy and real physical test evidence.
 
-**Start here:** [Build 007 Production Master](docs/BUILD-007-PRODUCTION-MASTER.md) · [BOM](docs/BUILD-007-BOM-REGISTER.csv) · [Acceptance Gates](docs/BUILD-007-ACCEPTANCE.csv) · [Shopping/DIY](docs/BUILD-007-SHOP-AND-DIY.md)
+**MANDATORY AT EVERY NEXT:** Read [Build 010 Master Checkpoint](docs/BUILD-010-MASTER-CHECKPOINT.md), [Current State](docs/CURRENT_STATE.md), [Next Build](docs/NEXT-BUILD.md), and [Build 010–030 Roadmap](docs/ROADMAP-010-030.md). At builds 020, 030, 040 etc repeat full retrospective review, test gate and explicit decision reconciliation.\n\n**Start here:** [Build 007 Production Master](docs/BUILD-007-PRODUCTION-MASTER.md) · [BOM](docs/BUILD-007-BOM-REGISTER.csv) · [Acceptance Gates](docs/BUILD-007-ACCEPTANCE.csv) · [Shopping/DIY](docs/BUILD-007-SHOP-AND-DIY.md)
 
 **Code:** [Android app foundation](android/) · [Python service foundation](server/) · [Build 006 setup](docs/BUILD-006-OS-SERVER.md)
 
