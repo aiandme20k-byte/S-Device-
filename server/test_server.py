@@ -29,6 +29,12 @@ class ServerTest(unittest.TestCase):
     def test_health(self):
         with urlopen("http://127.0.0.1:18765/health") as r:
             self.assertEqual(json.load(r)["status"], "ok")
+    def test_dashboard(self):
+        with urlopen("http://127.0.0.1:18765/dashboard") as r:
+            page = r.read().decode("utf-8")
+            self.assertIn("S DEVICE", page)
+            self.assertIn("PROJECTOR MODE", page)
+            self.assertEqual(r.headers.get("X-Content-Type-Options"), "nosniff")
     def test_protected(self):
         with self.assertRaises(HTTPError) as e:
             urlopen("http://127.0.0.1:18765/api/v1/device")
