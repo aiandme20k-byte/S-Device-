@@ -1,21 +1,22 @@
-# S Device One — Recycled Future Smartphone + Dual-Display AI Platform
+# S Device One — QVE HNS Future Technology
+**Current implementation: BUILD 011 (2026-10-18). Latest 10-build checkpoint: BUILD 010.**
 
-**Current continuity checkpoint: BUILD 010 (2026-10-15); engineering design baseline: BUILD 007.** The working realme 13 5G is the primary smartphone, with stock Android kept for drivers, radios and phone functionality. Custom S Device UX and private AI services are in development. The Samsung and Infinix are optional research donors. SETT X-1 is an inspiration example, **not** this product's name.
+Working realme 13 5G stays the primary cellular Android phone (SIM, calls, SMS and drivers remain on stock Android). S Device is a custom Android OS **experience** and local-first platform, not a new flashed ROM. For iPhone/iPad, S Device shares the interface through a future securely hosted Safari PWA; no iOS kernel replacement. Projector is a separate future hardware output. The Samsung and Infinix cracked devices are experimental donors, not approved battery donors. SETT X-1 is a research example, not this product's name.
 
-Goal: built-in smartphone screen + independent projector screen, local-first AI control, optional optically reflected ESP32 prism, recycled materials, strong privacy and real physical test evidence.
+## Mandatory continuity at every Next
+Read [Build 010 master checkpoint](docs/BUILD-010-MASTER-CHECKPOINT.md), [Current State](docs/CURRENT_STATE.md), [Next Build](docs/NEXT-BUILD.md) and the most recent implementation report. At Builds 020, 030, 040... audit all completed builds, changed hardware decisions, GitHub code, tests, costs and real verification evidence.
 
-**MANDATORY AT EVERY NEXT:** Read [Build 010 Master Checkpoint](docs/BUILD-010-MASTER-CHECKPOINT.md), [Current State](docs/CURRENT_STATE.md), [Next Build](docs/NEXT-BUILD.md), and [Build 010–030 Roadmap](docs/ROADMAP-010-030.md). At builds 020, 030, 040 etc repeat full retrospective review, test gate and explicit decision reconciliation.\n\n**Start here:** [Build 007 Production Master](docs/BUILD-007-PRODUCTION-MASTER.md) · [BOM](docs/BUILD-007-BOM-REGISTER.csv) · [Acceptance Gates](docs/BUILD-007-ACCEPTANCE.csv) · [Shopping/DIY](docs/BUILD-007-SHOP-AND-DIY.md)
+## Build 011 — Platform
+- [Engineering implementation and SIM/iOS constraints](docs/BUILD-011-SIM-AND-CROSS-PLATFORM.md)
+- [Android native app](android/) — QVE theme, read-only SIM/mobile data status, original dialer/SMS intents, **APK hardware field test pending**.
+- [Cross-platform browser interface](web/) — static QVE-branded Home/Network/AI/Devices PWA shell. On localhost PC; trusted HTTPS mobile deployment not done.
+- [Local-only Python server](server/) — protected API, serves [PC dashboard](dashboard/) and web app; no LAN exposure.
+- [Server CI](https://github.com/aiandme20k-byte/S-Device-/actions/workflows/server-tests.yml) and [Android CI](https://github.com/aiandme20k-byte/S-Device-/actions/workflows/android-build.yml).
 
-**Code:** [Android app foundation](android/) · [Python service foundation](server/) · [Build 006 setup](docs/BUILD-006-OS-SERVER.md)
+## Engineering baseline
+[Build 007 Production Master](docs/BUILD-007-PRODUCTION-MASTER.md) · [BOM](docs/BUILD-007-BOM-REGISTER.csv) · [Acceptance Gates](docs/BUILD-007-ACCEPTANCE.csv) · [Shopping & DIY](docs/BUILD-007-SHOP-AND-DIY.md) · [Roadmap 010–030](docs/ROADMAP-010-030.md).
 
-**Validation truth:** This repository contains design and starter source, not a released OS, working AI assistant, verified projector or proven ZPE power source. Batteryless lifetime runtime and transparent free-space holograms are NOT demonstrated; they cannot be used as production acceptance assumptions.
+## Validation truths
+Source code and CI are not final product verification. Unverified: user's Realme install, SIM/4G/5G performance, iOS deployment, model inference, projector, external ESP32, 4TB drive integration, commercial compliance and ZPE power production. QVE-ZPE indefinite energy is experimental/unverified; the phone must retain original certified battery and safely powered accessories.
 
-**Hardware safety:** Do not cross-wire salvaged phone batteries/charge systems or tamper with mains-voltage electronics. Run Realme on its original approved battery system; power accessories separately via approved USB supplies.
-
-**Data location:** Existing PC/SSD for active execution, 4 TB Alex HSXI drive designated authoritative long-term store (requires verified backup). Public GitHub never stores private recordings, passwords, IMEI or API keys.
-
-## Previous milestone records
-- [Build 001 inspection](docs/BUILD-001.md)
-- [Build 003 roles](docs/BUILD-003-DEVICE-ROLES.md)
-- [Build 004 multi-device research](docs/BUILD-004-MULTI-DEVICE.md)
-- [Build 005 donor concept](docs/BUILD-005-S-DEVICE-ONE.md)
+**Privacy:** No secrets, IMEI, SIM identifiers, personal pictures, raw mic/camera footage or phone numbers in public GitHub. Do not expose server port; approved remote cellular services need HTTPS plus explicit pairing. Preserve SHA-256 evidence and STOP/HOLD on safety issues.
