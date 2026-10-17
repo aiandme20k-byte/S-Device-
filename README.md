@@ -8,12 +8,12 @@ Read [Build 010 master checkpoint](docs/BUILD-010-MASTER-CHECKPOINT.md), [Curren
 
 ## Build 011 — Platform
 - [Engineering implementation and SIM/iOS constraints](docs/BUILD-011-SIM-AND-CROSS-PLATFORM.md)
-- [Android native app](android/) — QVE theme, read-only SIM/mobile data status, original dialer/SMS intents, **APK hardware field test pending**.
+- [Android native app](android/) — QVE theme, read-only SIM/mobile data status, original dialer/SMS intents, **CI debug APK build PASS, physical Realme field test pending**.
 - [Cross-platform browser interface](web/) — static QVE-branded Home/Network/AI/Devices PWA shell. On localhost PC; trusted HTTPS mobile deployment not done.
 - [Local-only Python server](server/) — protected API, serves [PC dashboard](dashboard/) and web app; no LAN exposure.
 - [Server CI](https://github.com/aiandme20k-byte/S-Device-/actions/workflows/server-tests.yml) and [Android CI](https://github.com/aiandme20k-byte/S-Device-/actions/workflows/android-build.yml).
 
-## Engineering baseline
+**CI evidence (Build 011):** [Python server PASS](https://github.com/aiandme20k-byte/S-Device-/actions/runs/39076662664) · [Android debug APK build PASS](https://github.com/aiandme20k-byte/S-Device-/actions/runs/39077274157). Debug APK artifact is attached to the Android run and expires 2026-10-24 UTC. Not a production signing certificate or completed installation.\n\n## Engineering baseline
 [Build 007 Production Master](docs/BUILD-007-PRODUCTION-MASTER.md) · [BOM](docs/BUILD-007-BOM-REGISTER.csv) · [Acceptance Gates](docs/BUILD-007-ACCEPTANCE.csv) · [Shopping & DIY](docs/BUILD-007-SHOP-AND-DIY.md) · [Roadmap 010–030](docs/ROADMAP-010-030.md).
 
 ## Validation truths
