@@ -35,6 +35,27 @@ class ServerTest(unittest.TestCase):
             self.assertIn("S DEVICE", page)
             self.assertIn("PROJECTOR MODE", page)
             self.assertEqual(r.headers.get("X-Content-Type-Options"), "nosniff")
+    def test_cross_platform_app(self):
+        with urlopen("http://127.0.0.1:18765/app/") as r:
+            page = r.read().decode("utf-8")
+            self.assertIn("S DEVICE", page)
+            self.assertIn("iOS", page)
+            self.assertEqual(r.headers.get("X-Frame-Options"), "DENY")
+    def test_pwa_files(self):
+        for path, mime in [
+            ("/app/manifest.webmanifest", "application/manifest+json"),
+            ("/app/sw.js", "application/javascript"),
+            ("/app/icon.svg", "image/svg+xml"),
+        ]:
+            with self.subTest(path=path):
+                with urlopen("http://127.0.0.1:18765" + path) as r:
+                    self.assertEqual(r.status, 200)
+                    self.assertIn(mime, r.headers.get("Content-Type"))
+    def test_post_denied(self):
+        req = Request("http://127.0.0.1:18765/api/v1/device", data=b"{}", method="POST")
+        with self.assertRaises(HTTPError) as e:
+            urlopen(req)
+        self.assertEqual(e.exception.code, 401)
     def test_protected(self):
         with self.assertRaises(HTTPError) as e:
             urlopen("http://127.0.0.1:18765/api/v1/device")
