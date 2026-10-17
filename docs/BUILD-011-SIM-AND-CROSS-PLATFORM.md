@@ -24,7 +24,7 @@ Date: 2026-10-18. Implemented in source; physical tests pending.
 
 ## Current gating
 - Python GitHub CI: PASS confirmed (run 39076662664) after Build 011 routes and tests.
-- Native Android build: CI trial used; inspect current Android run before marking PASS.
+- Native Android debug APK compile: PASS at GitHub Actions run 39077274157, commit cdb631cacb9f034117be5665aa0e4ffe0d8fb348. Artifact `s-device-build011-debug-apk` uploaded (ID 12117139134, expires 2026-10-24 UTC). ZIP artifact sha256 from GitHub: `2f6047bb3aa1090bce81f0f0044d0d3f64e7e4a2dc0f55120ebddbd4ef4049eb` (ZIP digest, **not** verified standalone APK SHA-256). Initial Android CI failures resolved: obsolete `tools` SDK package in action defaults; then Java bytecode 1.8 vs Kotlin JVM 17 mismatch. Build success does NOT verify phone installation.
 - SIM hardware/cellular/voice/SMS on the Realme: HOLD — no physical measurements.
 - iOS Safari functional deployment: HOLD — no HTTPS hosting, app icon not optimized for iOS.
 - Real-time AI data over SIM: HOLD — secure remote service not connected.
