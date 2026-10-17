@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="my"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#071426"><meta name="description" content="S Device: local-first cross-platform control shell">
+<link rel="manifest" href="/app/manifest.webmanifest"><link rel="icon" href="/app/icon.svg" type="image/svg+xml">
+<title>S Device — QVE HNS</title>
+<style>
+:root{font-family:system-ui,-apple-system,"Noto Sans Myanmar",sans-serif;color-scheme:dark;--cyan:#5ddcff;--gold:#d8b66c;--fg:#eaf8ff}*{box-sizing:border-box}body{margin:0;min-height:100dvh;color:var(--fg);background:radial-gradient(ellipse at top,#173c58,#050d1c 70%)}header{padding:1.6rem max(1rem,env(safe-area-inset-left));border-bottom:1px solid #31577a}.brand{font-size:.78rem;letter-spacing:.15em;color:var(--gold)}h1{margin:.3rem 0;font-size:clamp(2rem,7vw,3rem);letter-spacing:.12em}small{color:#acc9dc}nav{display:flex;gap:.5rem;padding:1rem;flex-wrap:wrap}button{border:1px solid #287599;color:var(--fg);background:#103753;border-radius:12px;padding:.75rem 1rem;font:inherit;cursor:pointer}button[aria-pressed=true]{border-color:#d8b66c;background:#1d4051}button:focus-visible{outline:3px solid #f4c75c}main{padding:0 1rem 2rem;max-width:850px;margin:auto}.panel{border:1px solid #2c7299;background:#0c273cce;border-radius:18px;padding:1rem 1.2rem;margin:0 0 1rem;box-shadow:0 10px 30px #0003}.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:.75rem}.tile{min-height:108px;text-align:left}.tile span{display:block;color:var(--cyan);font-size:1.3rem;margin-bottom:.3rem}.muted{color:#a4bdd0}h2{color:var(--cyan);margin:.3rem 0 1rem;font-size:1.1rem}footer{text-align:center;padding:1.5rem;color:#a9c4d7;font-size:.75rem}.warn{color:#ffd08e}.hidden{display:none}p{line-height:1.6}
+</style></head><body><header><div class="brand">QVE HNS • FUTURE TECHNOLOGY</div><h1>S DEVICE</h1><small>QUANTUM • VISION • EXPLORATION · BUILD 011</small></header>
+<nav aria-label="S Device sections">
+<button data-tab="home" aria-pressed="true">Home</button><button data-tab="network" aria-pressed="false">Network</button><button data-tab="ai" aria-pressed="false">AI</button><button data-tab="devices" aria-pressed="false">Devices</button>
+</nav>
+<main>
+<section id="home" class="panel"><h2>HOME • S DEVICE EXPERIENCE</h2><p>Android · iOS · Desktop · Projector browser interface</p>
+<div class="tiles"><button class="tile" data-tab="network"><span>◉</span>Network status</button><button class="tile" data-tab="ai"><span>✦</span>Local AI</button><button class="tile" data-tab="devices"><span>▣</span>Devices</button><button class="tile" id="openDashboard"><span>▤</span>Projector console</button></div></section>
+<section id="network" class="panel hidden"><h2>NETWORK • REAL-TIME HINT</h2><p id="networkState" aria-live="polite">Checking browser status…</p><p class="muted">Browser online status is a hint, not proof of internet access or SIM/mobile signal. SIM telemetry is Android-native only. Calls/SMS use the existing phone operating system.</p><button id="refresh">Refresh</button></section>
+<section id="ai" class="panel hidden"><h2>LOCAL AI</h2><p class="warn">AI service not paired yet. No model inference is claimed.</p><p>Future opt-in local AI tools: chat, file search, voice, project tools.</p></section>
+<section id="devices" class="panel hidden"><h2>DEVICE PLATFORM</h2><p>Android: native S Device app + this browser UI.</p><p>iOS: Safari web app / Add to Home Screen (not an iOS replacement).</p><p>PC: local projector dashboard and server.</p><p class="warn">Private PC pairing is not active. Remote cellular access requires a later approved HTTPS endpoint.</p></section>
+</main>
+<footer>Authorized By SETT • EXPLORE • ENGINEER • CREATE • A BETTER TOMORROW<br>Prototype software · no permission to access camera, microphone, SMS or contacts</footer>
+<script>
+function show(tab){for(const p of document.querySelectorAll("main > section"))p.classList.toggle("hidden",p.id!==tab);for(const b of document.querySelectorAll("[data-tab]"))if(b.hasAttribute("aria-pressed"))b.setAttribute("aria-pressed",String(b.dataset.tab===tab))}
+document.querySelectorAll("[data-tab]").forEach(b=>b.addEventListener("click",()=>show(b.dataset.tab)));
+document.getElementById("openDashboard").addEventListener("click",()=>{location.href="/dashboard"});
+function network(){document.getElementById("networkState").textContent=navigator.onLine?"Browser reports ONLINE (transport unverified)":"Browser reports OFFLINE";}
+window.addEventListener("online",network);window.addEventListener("offline",network);document.getElementById("refresh").addEventListener("click",network);network();
+if("serviceWorker" in navigator && window.isSecureContext)navigator.serviceWorker.register("/app/sw.js",{scope:"/app/"}).catch(()=>{});
+</script></body></html>
